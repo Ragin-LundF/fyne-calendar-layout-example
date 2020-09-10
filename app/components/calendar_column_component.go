@@ -70,8 +70,9 @@ func createAppointment() *string {
 		"shopping",
 	}
 
+	// simple rand to have random appointments
 	rand.Seed(time.Now().UnixNano())
-	var number = rand.Intn(5)
+	var number = rand.Intn(len(appointments) + 5) // higher number for empty times
 	if number < len(appointments) {
 		return &appointments[number]
 	}

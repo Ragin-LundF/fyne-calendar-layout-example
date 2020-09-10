@@ -7,15 +7,15 @@ import (
 )
 
 func main() {
-	calendarApp := app.NewWithID("go_calendar_example")
+	var calendarApp = app.NewWithID("go_calendar_example")
 
-	calendarWindow := calendarApp.NewWindow("Calendar Example")
-	mainMenu := menu.CreateMainMenu(calendarApp, calendarWindow)
+	var calendarWindow = calendarApp.NewWindow("Calendar Example")
+	var mainMenu = menu.CreateMainMenu(calendarApp, calendarWindow)
 
 	calendarWindow.SetMainMenu(mainMenu)
 	calendarWindow.SetMaster()
 
-	tabs := menu.CreateTabMenu(calendarApp, calendarWindow)
+	var tabs = menu.CreateTabMenu()
 	calendarWindow.SetContent(tabs)
 
 	calendarWindow.Resize(fyne.Size{

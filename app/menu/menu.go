@@ -9,18 +9,18 @@ import (
 )
 
 func CreateMainMenu(app fyne.App, window fyne.Window) *fyne.MainMenu {
-	quitItem := fyne.NewMenuItem("Quit", func() { app.Quit() })
+	var quitItem = fyne.NewMenuItem("Quit", func() { app.Quit() })
 
-	darkThemeItem := fyne.NewMenuItem("Dark Theme", func() {
+	var darkThemeItem = fyne.NewMenuItem("Dark Theme", func() {
 		app.Settings().SetTheme(theme.DarkTheme())
 		app.Preferences().SetString(constants.PreferencesTheme, constants.PreferencesThemeDark)
 	})
-	lightThemeItem := fyne.NewMenuItem("Light Theme", func() {
+	var lightThemeItem = fyne.NewMenuItem("Light Theme", func() {
 		app.Settings().SetTheme(theme.LightTheme())
 		app.Preferences().SetString(constants.PreferencesTheme, constants.PreferencesThemeLight)
 	})
 
-	mainMenu := fyne.NewMainMenu(
+	var mainMenu = fyne.NewMainMenu(
 		// a quit item will be appended to our first menu
 		fyne.NewMenu("Calendar", fyne.NewMenuItemSeparator(), quitItem),
 		fyne.NewMenu("Theme", darkThemeItem, lightThemeItem),
@@ -30,7 +30,7 @@ func CreateMainMenu(app fyne.App, window fyne.Window) *fyne.MainMenu {
 }
 
 // CreateTabMenu creates the main tab menu
-func CreateTabMenu(calendarApp fyne.App, calendarWindow fyne.Window) (tabs *widget.TabContainer) {
+func CreateTabMenu() (tabs *widget.TabContainer) {
 	tabs = widget.NewTabContainer(
 		widget.NewTabItemWithIcon("Day", theme.FolderIcon(), calendar.ViewCalendarDay()),
 		widget.NewTabItemWithIcon("Week", theme.FileIcon(), calendar.ViewCalendarWeek()),
