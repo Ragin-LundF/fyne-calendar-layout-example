@@ -1,4 +1,4 @@
-module k8s-management-go
+module calendar-example
 
 go 1.14
 

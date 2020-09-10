@@ -1,9 +1,9 @@
 package main
 
 import (
+	"calendar-example/app/menu"
 	"fyne.io/fyne"
 	"fyne.io/fyne/app"
-	"k8s-management-go/app/menu"
 )
 
 func main() {

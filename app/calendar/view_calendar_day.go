@@ -1,10 +1,10 @@
 package calendar
 
 import (
+	"calendar-example/app/components"
 	"fyne.io/fyne"
 	"fyne.io/fyne/layout"
 	"fyne.io/fyne/widget"
-	"k8s-management-go/app/components"
 )
 
 // ViewCalendarDay shows the current calendar as day view

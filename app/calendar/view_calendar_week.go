@@ -1,10 +1,10 @@
 package calendar
 
 import (
+	"calendar-example/app/components"
 	"fyne.io/fyne"
 	"fyne.io/fyne/layout"
 	"fyne.io/fyne/widget"
-	"k8s-management-go/app/components"
 )
 
 // ViewCalendarWeek shows the current calendar as weekly view

@@ -1,11 +1,11 @@
 package menu
 
 import (
+	"calendar-example/app/calendar"
+	"calendar-example/app/constants"
 	"fyne.io/fyne"
 	"fyne.io/fyne/theme"
 	"fyne.io/fyne/widget"
-	"k8s-management-go/app/calendar"
-	"k8s-management-go/app/constants"
 )
 
 func CreateMainMenu(app fyne.App, window fyne.Window) *fyne.MainMenu {
